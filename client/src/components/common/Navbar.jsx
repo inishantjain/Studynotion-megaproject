@@ -6,7 +6,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-import Logo from "../../assets/Logo/Logo-Full-Light.png";
+import Logo from "../../assets/Logo/logo-Full-Light.png";
 import { NavbarLinks } from "../../data/navbar-links";
 import { useDispatch, useSelector } from "react-redux";
 import { BsFillCartFill } from "react-icons/bs";

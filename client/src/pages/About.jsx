@@ -2,7 +2,7 @@ import React from "react";
 import AboutUs1 from "../assets/Images/aboutus1.webp";
 import AboutUs2 from "../assets/Images/aboutus2.webp";
 import AboutUs3 from "../assets/Images/aboutus3.webp";
-import FoundingStory from "../assets/Images/FoundingStory.png";
+import FoundingStory from "../assets/Images/foundingStory.png";
 import Stats from "../components/core/AboutPage/Stats";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection";
