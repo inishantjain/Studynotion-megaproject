@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import HighlightText from "../components/core/HomePage/HighlightText";
 import CTAButton from "../components/core/HomePage/Button";
-import Banner from "../assets/Images/Banner.mp4";
+import Banner from "../assets/Images/banner.webm";
 import TimeLineImage from "../assets/Images/TimeLineImage.png";
 import CodeBlock from "../components/core/HomePage/CodeBlock";
 import Logo1 from "../assets/TimeLineLogo/Logo1.svg";
