@@ -3,7 +3,6 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import HighlightText from "../components/core/HomePage/HighlightText";
 import CTAButton from "../components/core/HomePage/Button";
-import Banner from "../assets/Images/banner.webm";
 import TimeLineImage from "../assets/Images/TimeLineImage.png";
 import CodeBlock from "../components/core/HomePage/CodeBlock";
 import Logo1 from "../assets/TimeLineLogo/Logo1.svg";
@@ -14,7 +13,6 @@ import Know_your_progress from "../assets/Images/Know_your_progress.svg";
 import Compare_with_others from "../assets/Images/Compare_with_others.svg";
 import Plan_your_lessons from "../assets/Images/Plan_your_lessons.svg";
 import Instructor from "../assets/Images/Instructor.png";
-import ReviewCard from "../components/core/HomePage/ReviewCard";
 import Footer from "../components/common/Footer";
 import ExploreMore from "../components/core/HomePage/ExploreMore";
 import ReviewCarousel from "../components/common/ReviewCarousel";
@@ -56,7 +54,7 @@ function Home() {
               autoPlay
               className="h-[30rem] shadow-[8px_8px_0px_0px] shadow-blue-200 md:shadow-[16px_16px_0px_0px] md:shadow-pure-greys-5"
             >
-              <source src={Banner} />
+              <source src="https://res.cloudinary.com/dwkufeilh/video/upload/v1689779621/Codehelp/production_id_4841404_540p_ps1u8m.mp4" />
             </video>
           </div>
 

@@ -7,6 +7,7 @@ import Stats from "../components/core/AboutPage/Stats";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection";
 import Footer from "../components/common/Footer";
+import ReviewCarousel from "../components/common/ReviewCarousel";
 
 function About() {
   return (
@@ -111,7 +112,9 @@ function About() {
         <ContactFormSection />
       </section>
       {/* Reviews form */}
-      <section>{/*TODO: Review Carousel */}</section>
+      <section>
+        <ReviewCarousel />
+      </section>
       <Footer />
     </div>
   );
