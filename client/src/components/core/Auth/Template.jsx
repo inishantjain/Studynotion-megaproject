@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import frameImg from "../../../assets/Images/frame.png";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
+import { Link } from "react-router-dom";
 
 function Template({ title, description1, description2, image, formType }) {
   const { loading } = useSelector((state) => state.auth);
@@ -15,6 +16,19 @@ function Template({ title, description1, description2, image, formType }) {
       ) : (
         <div className="mx-auto flex w-11/12 max-w-maxContent flex-col-reverse justify-between gap-y-12 py-12 md:flex-row md:gap-x-12 md:gap-y-0">
           <div className="mx-auto w-11/12 max-w-[450px] md:mx-0">
+            {/* link to login and signup */}
+            <p className="mb-4 text-richBlack-25">
+              {formType === "signup"
+                ? "Already have an account "
+                : "Create Account ? "}
+              <Link
+                className="capitalize text-yellow-25 underline hover:text-yellow-50"
+                to={formType === "signup" ? "/login" : "/signup"}
+              >
+                {formType === "signup" ? "Login" : "Sign Up"}
+              </Link>
+            </p>
+            {/* title */}
             <h1 className="text-[1.875rem] font-semibold leading-[2.375rem] text-richBlack-5">
               {title}
             </h1>
