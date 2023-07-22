@@ -52,7 +52,7 @@ function Home() {
               muted
               loop
               autoPlay
-              className="h-[30rem] shadow-[8px_8px_0px_0px] shadow-blue-200 md:shadow-[16px_16px_0px_0px] md:shadow-pure-greys-5"
+              className="shadow-[8px_8px_0px_0px] shadow-pure-greys-5 md:shadow-[16px_16px_0px_0px] md:shadow-pure-greys-5 lg:h-[30rem]"
             >
               <source src="https://res.cloudinary.com/dwkufeilh/video/upload/v1689779621/Codehelp/production_id_4841404_540p_ps1u8m.mp4" />
             </video>

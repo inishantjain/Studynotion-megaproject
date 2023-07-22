@@ -47,7 +47,7 @@ function CodeBlock() {
       {/* background ellipse */}
 
       <div
-        className="absolute -left-20 -top-20 -z-10 h-[20rem] w-[30rem] 
+        className="absolute -left-20 -top-20 -z-10 h-[20rem] max-w-[30rem] 
 bg-[radial-gradient(ellipse,#FFA50099_40%,#00000000_74%)] opacity-20"
       ></div>
     </div>
