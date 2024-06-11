@@ -13,14 +13,9 @@ const initializeUserDetails = async () => {
 
 // Set initial state without fetching user details
 const initialState = {
-  user: null,
+  user: await initializeUserDetails(),
   loading: false,
 };
-
-// Asynchronous initialization of user details
-initializeUserDetails().then((userDetails) => {
-  initialState.user = userDetails;
-});
 
 const profileSlice = createSlice({
   name: "profile",

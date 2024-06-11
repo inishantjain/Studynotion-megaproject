@@ -14,14 +14,15 @@ function ReviewCarousel() {
     }
     getAllReviews();
   }, []);
+
   return (
     <div className="scrollbar-hide flex flex-shrink-0 gap-6 overflow-x-auto">
       {reviews.map((item) => (
         <ReviewCard
           key={item._id}
-          dp={item?.user?.image}
-          name={item?.user.firstName + " " + item?.user?.lastName}
-          email={item?.user.email}
+          dp={item.user ? item?.user?.image : ""}
+          name={item.user ? item?.user.firstName + " " + item?.user?.lastName : "Anonymous"}
+          email={item.user ? item?.user.email : ""}
           review={item.review}
           rating={item.rating}
         />
