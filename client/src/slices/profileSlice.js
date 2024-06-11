@@ -1,19 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUserData } from "../services/operations/profileAPI";
-
-// Async initialization function to fetch user details
-const initializeUserDetails = async () => {
-  const token = JSON.parse(localStorage.getItem("token"));
-  if (token) {
-    const userDetails = await getUserData(token);
-    return userDetails;
-  }
-  return null;
-};
 
 // Set initial state without fetching user details
 const initialState = {
-  user: await initializeUserDetails(),
+  user: null,
   loading: false,
 };
 

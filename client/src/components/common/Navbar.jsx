@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Link,
-  Outlet,
-  matchPath,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { Link, Outlet, matchPath, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo/logo-Full-Light.png";
 import { NavbarLinks } from "../../data/navbar-links";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +12,6 @@ import { BiCaretDown } from "react-icons/bi";
 import { logout } from "../../services/operations/authAPI";
 
 function Navbar() {
-  const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
 
@@ -48,10 +41,7 @@ function Navbar() {
         <ul className="hidden items-center gap-3 md:flex">
           {NavbarLinks.map((link, idx) =>
             link.title === "Catalog" ? (
-              <li
-                key={idx}
-                className="group relative flex cursor-pointer items-center gap-1"
-              >
+              <li key={idx} className="group relative flex cursor-pointer items-center gap-1">
                 {link.title} <HiOutlineChevronDown />
                 <div className="invisible absolute -left-8 top-10 z-10 flex w-52 flex-col gap-1 rounded-xl bg-white p-2 text-richBlack-700 opacity-0 transition-[transform_opacity] group-hover:visible group-hover:-translate-y-4 group-hover:opacity-100">
                   {subLinks.map((category, idx) => (
@@ -70,12 +60,7 @@ function Navbar() {
               </li>
             ) : (
               <li key={idx}>
-                <Link
-                  className={`cursor-pointer ${
-                    matchRoute(link?.path) ? "text-yellow-25" : ""
-                  }`}
-                  to={link.path}
-                >
+                <Link className={`cursor-pointer ${matchRoute(link?.path) ? "text-yellow-25" : ""}`} to={link.path}>
                   {link.title}
                 </Link>
               </li>
@@ -98,23 +83,14 @@ function Navbar() {
           {/* profile picture or login signup */}
           {!user ? (
             <>
-              <Link
-                className="hidden rounded-lg px-4 py-1 ring-2 ring-blue-500 sm:block"
-                to={"/login"}
-              >
+              <Link className="hidden rounded-lg px-4 py-1 ring-2 ring-blue-500 sm:block" to={"/login"}>
                 Log in
               </Link>
-              <Link
-                className="hidden rounded-lg px-4 py-1 ring-2 ring-blue-500 sm:block"
-                to={"/signup"}
-              >
+              <Link className="hidden rounded-lg px-4 py-1 ring-2 ring-blue-500 sm:block" to={"/signup"}>
                 Sign up
               </Link>
               {/* //for mobile width */}
-              <Link
-                className="rounded-lg p-2 ring-2 ring-blue-500 sm:hidden"
-                to={"/login"}
-              >
+              <Link className="rounded-lg p-2 ring-2 ring-blue-500 sm:hidden" to={"/login"}>
                 <BiLogIn />
               </Link>
             </>
@@ -135,31 +111,18 @@ function ProfileDropDown() {
   const [showLinks, setShowLinks] = useState(false);
 
   return (
-    <div
-      onClick={() => setShowLinks((prev) => !prev)}
-      className="relative flex cursor-pointer items-center gap-1"
-    >
-      <img
-        className="aspect-square rounded-full object-cover"
-        src={user?.image}
-        width={30}
-      />
+    <div onClick={() => setShowLinks((prev) => !prev)} className="relative flex cursor-pointer items-center gap-1">
+      <img className="aspect-square rounded-full object-cover" src={user?.image} width={30} />
       <BiCaretDown className="hidden sm:inline" />
       <div
         className={`absolute right-2 top-8 z-10 space-y-1 divide-y divide-richBlack-500 rounded bg-richBlack-700 p-2 text-xs text-richBlack-200 ${
           showLinks ? "block" : "hidden"
         }`}
       >
-        <button
-          className="hover:text-richBlack-25"
-          onClick={() => navigate("dashboard/my-profile")}
-        >
+        <button className="hover:text-richBlack-25" onClick={() => navigate("dashboard/my-profile")}>
           Dashboard
         </button>
-        <button
-          onClick={() => dispatch(logout(navigate))}
-          className="flex items-center gap-1 hover:text-richBlack-25"
-        >
+        <button onClick={() => dispatch(logout(navigate))} className="flex items-center gap-1 hover:text-richBlack-25">
           <HiLogout /> Logout
         </button>
       </div>
